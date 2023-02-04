@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/addep.css' %}">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+    <div class="container">
+        <header>Registration</header>
+
+        <form action="#" method="post" >
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input name = "fname" type="text" placeholder="Enter your name"  required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input name="dob" type="date" placeholder="Enter birth date"  required>
+                        </div>
+                             <div class="input-field">
+                            <label>Email</label>
+                            <input name="mail" type="text" placeholder="Enter your email"  required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input name="moblile" type="number" placeholder="Enter mobile number"  required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select >
+                                <option name = "gender" required >Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Specialization</label>
+                            <input name = "specialization" type="text" placeholder="Enter your Specialization" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Religion</label>
+                            <input name = "religion" type="text" placeholder="Enter Religion" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Blood Group</label>
+                            <input name = "bloodGroup" type="text" placeholder="Enter Blood Group" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Employee Role</label>
+                            <input name="Role" type="text" placeholder="Enter Employee Role" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Employee Salary</label>
+                            <input name="Salary" type="Number" placeholder="Enter issued state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>joining date</label>
+                            <input name="joining" type="date" placeholder="Enter your issued date" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>duration</label>
+                            <input name="Duration" type="text" placeholder="Enter expiry date" required>
+                        </div>
+                    </div> 
+
+                    <button type="submit" class="sumbit">
+                        <span class="btnText">Submit</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            </div>
+        </form>
+    </div>
+
+	{% load static %}
+	<script src="{% static 'js/adminscript.js' %}"></script>
+</body>
+</html>
